@@ -1,4 +1,13 @@
-def my_print(name):
-  print(name)
+def func_1(obj):
+  obj['one'] = 'one'
+  return obj
 
-my_print('adada')
+new_obj = {
+  'name': 'name',
+  'aaa': 'aaa',
+}
+
+res = func_1(new_obj)
+
+print(res)
+print(new_obj)
