@@ -11,18 +11,15 @@ class Image:
         return self.resolution
 
 
-image = Image('64x64', 'title1', 'extension1')
+class PNGImage(Image):
+    def get_name(self):
+        return f"{self.resolution}.{self.extension}"
 
-print(image.get_resize())
 
-image.set_resize('128x128')
+png = PNGImage('5x5', 't', 'png')
 
-print(image.get_resize())
+print(png.get_name())
+print(png.resolution)
 
-image2 = Image('6x6', 'title2', 'extension2')
-
-print(image2.get_resize())
-
-image2.set_resize('12x12')
-
-print(image2.get_resize())
+png.set_resize('34x3')
+print(png.resolution)
